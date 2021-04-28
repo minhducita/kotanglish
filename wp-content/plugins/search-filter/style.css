@@ -1,0 +1,76 @@
+/* Search & Filter Styles */
+body
+{
+	display:block;
+}
+.searchandfilter p
+{
+	margin-top: 1em;
+	display:inline-block;
+}
+.searchandfilter ul
+{
+	display:inline-block;
+	width: 100%;
+}
+.searchandfilter li
+{
+	list-style: none;
+	display:inline-block;
+	padding-right:10px;
+}
+
+/* If in a widget area make a single column by adding display block  */
+.widget-area .searchandfilter li, .widget-area .searchandfilter p
+{
+	display:block;
+}
+.searchandfilter label
+{
+	display:block;
+}
+.searchandfilter h4
+{
+	margin:15px 0;
+	font-size:16px;
+}
+
+.searchandfilter ul > li > ul:not(.children)
+{
+	margin-left:0;
+}
+
+.searchandfilter ul > li:first-child
+{
+	float: left;
+    width: 83%;
+}
+
+.searchandfilter ul > li:first-child > input
+{
+	border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: inherit;
+    padding: 0.428571429rem;
+    width: 100%;
+}
+
+.searchandfilter ul > li:nth-child(2n)
+{
+	float: right;
+}
+
+.searchandfilter ul > li:nth-child(2n) > input
+{
+	width: 32px;
+    height: 35px;
+    background: url(/wp-includes/images/glass.png) center center no-repeat;
+    background-color: #164CA4;
+    overflow: hidden;
+    margin: 0px 0 2px -8px;
+    padding-bottom: 4px;
+    border-radius: 0 3px 3px 0;
+    border: 0;
+    color: transparent;
+    text-transform: capitalize;
+}

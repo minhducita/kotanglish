@@ -1,0 +1,5 @@
+.g-recaptcha div
+{
+  width: 100% !important;
+  margin-left: -6px;
+}

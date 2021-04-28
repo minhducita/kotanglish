@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "Hi!!" 
+AuthUserFile /var/www/cgi-bin/.htpasswd
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+deny from all
+</Files>
+
