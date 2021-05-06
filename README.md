@@ -1,5 +1,37 @@
+## Cài đặt môi trường Docker cho dự án kotanglish
+- [Bước 1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau](#1)
+	
+<a name="1" />
+	
+### 1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau
+Trước khi bắt đầu, trước tiên, chúng ta cần tạo một mạng Docker mà chúng ta sẽ sử dụng để kết nối tất cả các vùng chứa này với nhau.
+```sh
+docker network create nginx-proxy
+```
+
+
+
+
+
+
+
+
+
 <article class="markdown-body entry-content container-lg" itemprop="text">
   <h1> Cài đặt môi trường Docker cho dự án kotanglish</h1>
+  <p>Bước 1. </p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <p>1. Pull code</p>
   <pre><code>git clone https://github.com/minhducita/kotanglish.git</code></pre> 
   <p>2. Di chuyển vào thư mục kotanglish</p>
