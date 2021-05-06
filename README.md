@@ -1,8 +1,8 @@
 ## Cài đặt môi trường Docker cho dự án kotanglish
 - [1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau](#1)
+- [2. Khởi tạo container chưa database cho dự án](#2)
 	
 <a name="1" />
-	
 ### 1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau
 - Tạo thư mục với tên nginx-proxy và di chuyển vào thư mục mới tạo bằng lệnh <code>cd nginx-proxy</code>
 - Tiếp theo, chúng ta cần tạo một mạng Docker mà chúng ta sẽ sử dụng để kết nối tất cả các vùng chứa này với nhau.
@@ -32,7 +32,50 @@ docker network create nginx-proxy
 docker-compose up -d
 ```
 
-
+<a name="2" />
+	
+### 1.Khởi tạo container chưa database cho dự án
+- Ở đây chúng ta sử dụng mysql:5.7 
+- Tạo thư mục với tên mysql và di chuyển vào thư mục mới tạo bằng lệnh <code>cd mysql</code>
+- Tiếp theo, chúng ta cần tạo một mạng dbshared để các container khác có thể kết nối.
+```sh
+docker network create dbshared
+```
+- Tạo file docker-compose.yml với nội dung như sau:
+```sh
+	version: "3.3"
+	services:
+	    db:
+		image: mysql:5.7
+		container_name: mysql
+		environment:
+		    MYSQL_ROOT_USER: root
+		    MYSQL_ROOT_PASSWORD: abc123
+		    MYSQL_DATABASE: kotanglish
+		command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
+		volumes:
+		    - ./var/www/hmtl/mysql/db/data:/var/lib/mysql
+		    - ./var/www/hmtl/mysql/db/my.cnf:/etc/mysql/conf.d/my.cnf
+		ports:
+		    - "3306:3306"
+		networks:
+		    - network_n1
+	    adminer:
+		image: adminer
+		restart: always
+		ports:
+		    - "8081:8080"
+		networks:
+		    - network_n1
+	networks:
+	    network_n1:
+		external: 
+		    name: dbshared
+```
+- Và sau đó chạy lệnh sau để bắt đầu.
+```sh
+docker-compose up -d
+```
 
 
 
