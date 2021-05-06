@@ -4,11 +4,12 @@
 <a name="1" />
 	
 ### 1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau
-Trước khi bắt đầu, trước tiên, chúng ta cần tạo một mạng Docker mà chúng ta sẽ sử dụng để kết nối tất cả các vùng chứa này với nhau.
+- Tạo thư mục với tên nginx-proxy và di chuyển vào thư mục mới tạo bằng lệnh <code>cd nginx-proxy</code>
+- Tiếp theo, chúng ta cần tạo một mạng Docker mà chúng ta sẽ sử dụng để kết nối tất cả các vùng chứa này với nhau.
 ```sh
 docker network create nginx-proxy
 ```
-- Tạo file docker-compose.yml và khai báo containe:
+- Tạo file docker-compose.yml với nội dung như sau:
 ```sh
 	version: "3"
 	services:
@@ -25,7 +26,11 @@ docker network create nginx-proxy
 	    external:
 	      name: nginx-proxy
 ```
-
+- <i>Lưu ý: Do chúng ta đang sử dụng cổng 80, nên để khởi động được container trên bạn cần tắt các dịch vụ hoặc các container khách đang sử dụng chung cổng 80.</i>
+- Và sau đó chạy lệnh sau để bắt đầu.
+```sh
+docker-compose up -d
+```
 
 
 
