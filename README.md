@@ -1,6 +1,6 @@
 ## Cài đặt môi trường Docker cho dự án kotanglish
-- [1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau](#
-- [2. Khởi tạo container chưa database cho dự án](#2)1)
+- [1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau](#1)
+- [2. Khởi tạo container chưa database cho dự án](#2)
 - [3. Cài đặt môi trường Docker cho dự án](#3)
 	
 <a name="1" />
