@@ -105,7 +105,7 @@ docker-compose up -d
             image: wordpress:php7.3
             container_name: kotanglish
             volumes:
-                - ./web/:/var/www/html
+                - ./:/var/www/html
             networks:
                 - network_nginx_proxy
                 - network_2
