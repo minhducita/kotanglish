@@ -5,13 +5,16 @@
   <p>2. Di chuyển vào thư mục kotanglish</p>
   <pre><code>cd kotanglish</code></pre> 
   <p>3. Tạo file docker-compose.yml và khai báo container<p>
-  Nội dung file docker-compose.yml bên dưới.
+  <p>Nội dung file docker-compose.yml bên dưới.
 
   Khai báo các thông số cho mysql
 
-  User mình chọn là root cụ thể trong docker-compose là MYSQL_USER: root
-  Password của mysql mình cũng đặt là root cụ thể trong docker-compose là MYSQL_ROOT_PASSWORD: root
-  Database name mình đặt là wordpress cụ thể trong file docker-compse là WORDPRESS_DB_NAME: wordpress
+  <ul>
+    <li>User mình chọn là <code>root</code> cụ thể trong docker-compose là <code>MYSQL_USER: root</code></li>
+    <li>Password của mysql mình cũng đặt là <code>root</code> cụ thể trong docker-compose là <code>MYSQL_ROOT_PASSWORD: root</code></li>
+    <li>Database name mình đặt là <code>wordpress</code> cụ thể trong file docker-compse là <code>WORDPRESS_DB_NAME: wordpress</code></li>
+  </ul>
+
   Bạn có thể thay đổi user/pass và database name tùy ý mình nhé
   
   <pre><code>
