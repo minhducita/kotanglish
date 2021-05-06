@@ -129,5 +129,5 @@ docker-compose up -d
 <pre><code>C:\Windows\System32\drivers\etc.</code></pre>
 - Nhập nội dung <code>192.168.1.99 local.kotanglish</code> vào cuối file host và lưu lại.
 <i><b>Lưu ý:</b> Thay đổi dịa chỉ ip <code>192.168.1.99</code> bằng địa chỉ ip server của bạn</i>
-<p>Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ local.kotanglish.</p>
+<p>Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ <code>local.kotanglish</code>.</p>
 
