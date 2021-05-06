@@ -122,6 +122,12 @@ docker-compose up -d
   </code></pre>
   
   
-  <p>Và chúng ta sẽ chạy lên thử với câu lệnh</p>
-  <pre><code>sudo docker-compose up -d</code></pre>
+  <p>Sau đó khởi động container bằng lệnh</p>
+  <pre><code>docker-compose up -d</code></pre>
+  
+  - Tiếp theo chúng ta cấu hình file hosts. Bạn mở file hosts nằm trong thư mục có đường dẫn sau:
+<pre><code>C:\Windows\System32\drivers\etc.</code></pre>
+- Nhập nội dung <code>192.168.1.99 local.kotanglish</code> vào cuối file host và lưu lại.
+<i><b>Lưu ý:</b> Thay đổi dịa chỉ ip <code>192.168.1.99</code> bằng địa chỉ ip server của bạn</i>
+<pre><code>192.168.1.99 web-example.com</code></pre> 
 
