@@ -1,10 +1,19 @@
 <article class="markdown-body entry-content container-lg" itemprop="text">
-  <h1> Cài đặt môi trường Docker cho dự án kotanglish (wordpress)</h1>
+  <h1> Cài đặt môi trường Docker cho dự án kotanglish</h1>
   <p>1. Pull code</p>
   <pre><code>git clone https://github.com/minhducita/kotanglish.git</code></pre> 
   <p>2. Di chuyển vào thư mục kotanglish</p>
   <pre><code>cd kotanglish</code></pre> 
   <p>3. Tạo file docker-compose.yml và khai báo container<p>
+  Nội dung file docker-compose.yml bên dưới.
+
+  Khai báo các thông số cho mysql
+
+  User mình chọn là root cụ thể trong docker-compose là MYSQL_USER: root
+  Password của mysql mình cũng đặt là root cụ thể trong docker-compose là MYSQL_ROOT_PASSWORD: root
+  Database name mình đặt là wordpress cụ thể trong file docker-compse là WORDPRESS_DB_NAME: wordpress
+  Bạn có thể thay đổi user/pass và database name tùy ý mình nhé
+  
   <pre><code>
     version: "3.3"
     services:
