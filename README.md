@@ -9,8 +9,9 @@
     DB_NAME – tên database.
     DB_USER – tên người dùng database.
     DB_PASSWORD – password của người dùng.
-    DB_HOST – hostname database (giá trị này thường là localhost, nhưng nó có thể thay đổi tùy thuộc vào nền tảng hosting của bạn).
+    DB_HOST – hostname database.
   </code></pre>
+  <p>hostname database (giá trị này thường là localhost, nhưng nó có thể thay đổi tùy thuộc vào nền tảng hosting của bạn).</p>
   
   
   
