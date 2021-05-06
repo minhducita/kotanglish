@@ -1,5 +1,5 @@
 ## Cài đặt môi trường Docker cho dự án kotanglish
-- [Bước 1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau](#1)
+- [1. Khởi động nginx-proxy để kết nối Docker và Nginx với nhau](#1)
 	
 <a name="1" />
 	
@@ -8,7 +8,23 @@ Trước khi bắt đầu, trước tiên, chúng ta cần tạo một mạng Do
 ```sh
 docker network create nginx-proxy
 ```
+- Tạo file docker-compose.yml và khai báo containe:
+```sh
+	version: "3"
+	services:
+	  nginx-proxy:
+	    image: jwilder/nginx-proxy:latest
+	    container_name: nginx-proxy
+	    ports:
+	      - "80:80"
+	    volumes:
+	      - /var/run/docker.sock:/tmp/docker.sock:ro
 
+	networks:
+	  default:
+	    external:
+	      name: nginx-proxy
+```
 
 
 
