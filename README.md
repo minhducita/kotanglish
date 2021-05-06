@@ -1,16 +1,33 @@
-## Cài đặt môi trường Docker cho dự án kotanglish (wordpress)
 <article class="markdown-body entry-content container-lg" itemprop="text">
-  <h1>Ví dụ Docker compose cơ bản</h1>
-  <p>Pull code</p>
-  <pre><code>git clone https://github.com/minhducita/dockercompose.git</code></pre> 
-  <p>Sau khi Pull code về bạn vào thư mục chứa Docker Compose bằng lệnh sau</p>
-  <pre><code>cd dockercompose</code></pre> 
-  <p>Tiếp theo tạo file .env từ file .env.example<p>
-  <pre><code> cp app/.env.example app/.env</code></pre>
-  <p>Change value params in .env:</p>
+  <h1> Cài đặt môi trường Docker cho dự án kotanglish (wordpress)</h1>
+  <p>1. Pull code</p>
+  <pre><code>git clone https://github.com/minhducita/kotanglish.git</code></pre> 
+  <p>2. Di chuyển vào thư mục kotanglish</p>
+  <pre><code>cd kotanglish</code></pre> 
+  <p>3. Tạo file docker-compose.yml và khai báo container<p>
   <pre><code>
-  DB_HOST=database
-  DB_PASSWORD=secret
+    version: "3.3"
+    services:
+        app:
+            ports:
+                - 8082:80
+            image: wordpress:php7.3
+            container_name: kotanglish
+            volumes:
+                - ./web/:/var/www/html
+            networks:
+                - network_nginx_proxy
+                - network_2
+            restart: always
+            environment: 
+                VIRTUAL_HOST: "local.kotanglish"
+    networks:
+        network_nginx_proxy:
+            external: 
+                name: nginx-proxy
+        network_2:
+            external: 
+                name: dbshared
   </code></pre>
   
   
