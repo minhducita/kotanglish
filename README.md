@@ -11,7 +11,7 @@
     DB_PASSWORD – password của người dùng.
     DB_HOST – hostname database.
   </code></pre>
-  <p>hostname database (giá trị này thường là localhost, nhưng nó có thể thay đổi tùy thuộc vào nền tảng hosting của bạn).</p>
+  <p><i>hostname database (giá trị này thường là localhost, nhưng nó có thể thay đổi tùy thuộc vào nền tảng hosting của bạn).</i></p>
   
   
   
