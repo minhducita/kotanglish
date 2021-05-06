@@ -3,7 +3,17 @@
   <p>1. Pull code</p>
   <pre><code>git clone https://github.com/minhducita/kotanglish.git</code></pre> 
   <p>2. Di chuyển vào thư mục kotanglish</p>
-  <pre><code>cd kotanglish</code></pre> 
+  <pre><code>cd kotanglish</code></pre>    
+  <p>3. Cập nhật wp-config.php</p>
+  <pre><code>
+    DB_NAME – tên database.
+    DB_USER – tên người dùng database.
+    DB_PASSWORD – password của người dùng.
+    DB_HOST – hostname database (giá trị này thường là localhost, nhưng nó có thể thay đổi tùy thuộc vào nền tảng hosting của bạn).
+  </code></pre>
+  
+  
+  
   <p>3. Tạo file docker-compose.yml và khai báo container<p>
   <p>Nội dung file docker-compose.yml bên dưới.
 
