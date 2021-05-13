@@ -130,4 +130,5 @@ docker-compose up -d
 - Nhập nội dung <code>192.168.1.99 local.kotanglish</code> vào cuối file host và lưu lại.
 <i><b>Lưu ý:</b> Thay đổi dịa chỉ ip <code>192.168.1.99</code> bằng địa chỉ ip server của bạn</i>
 <p>Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ <code>local.kotanglish</code>.</p>
+<p>Truy cập vào trang quản trị: http://local.kotanglish/jalogin.php với User/Pass tương ứng trong database của bạn.</p>
 
