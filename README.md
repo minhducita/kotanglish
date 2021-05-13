@@ -84,7 +84,7 @@ docker-compose up -d
 ### 3.Cài đặt môi trường Docker cho dự án
 
   <p>3.1. Pull code</p>
-  <pre><code>git clone https://github.com/minhducita/kotanglish.git</code></pre> 
+  <pre><code>git clone ssh://gituser@jawhm.net:8822/var/lib/git/repository/kotanglish.git</code></pre> 
   <p>3.2. Di chuyển vào thư mục kotanglish</p>
   <pre><code>cd kotanglish</code></pre>    
   <p>3.3. Cập nhật wp-config.php</p>
